@@ -1,221 +1,197 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <!-- Basic Meta -->
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MostlyPostly SMS Consent — Rejuve Salon Spa LLC</title>
-  <meta name="description" content="SMS consent disclosure for Rejuve Salon Spa LLC, administered via MostlyPostly." />
-  <style>
-    :root {
-      --bg: #0b0c10;
-      --card: #111318;
-      --text: #e6e7eb;
-      --muted: #a8adbd;
-      --accent: #7dd3fc; f
-      --border: #1f2330;
-      --ok: #a7f3d0;
-      --warn: #fde68a;
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(125,211,252,.12), transparent 60%),
-                  radial-gradient(900px 500px at 110% 20%, rgba(167,243,208,.10), transparent 60%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      padding: 72px 20px 24px;
-      text-align: center;
-    }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      padding: 10px 16px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.05));
-      box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 10px 30px rgba(0,0,0,.35);
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: .2px;
-    }
-    .brand .dot {
-      width: 10px; height: 10px; border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, var(--accent), #38bdf8 60%, #0891b2);
-      box-shadow: 0 0 12px rgba(125,211,252,.9);
-    }
-    h1 {
-      margin: 22px 0 10px;
-      font-size: clamp(28px, 4vw, 44px);
-      letter-spacing: .2px;
-    }
-    .subtle { color: var(--muted); font-size: 14px; }
-    main {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 24px 20px 80px;
-      display: grid;
-      gap: 16px;
-    }
-    section {
-      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.12));
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 22px 22px;
-      box-shadow: 0 8px 30px rgba(0,0,0,.28);
-    }
-    h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      letter-spacing: .2px;
-    }
-    ul { margin: 10px 0 0 0; padding-left: 20px; }
-    li { margin: 6px 0; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .tag {
-      display: inline-block;
-      font-size: 12px;
-      border: 1px dashed var(--border);
-      border-radius: 999px;
-      padding: 4px 10px;
-      color: var(--muted);
-      background: rgba(255,255,255,.02);
-      margin: 6px 6px 0 0;
-    }
-    .grid-2 {
-      display: grid;
-      gap: 16px;
-    }
-    @media (min-width: 860px) {
-      .grid-2 { grid-template-columns: 1fr 1fr; }
-    }
-    footer {
-      max-width: 880px;
-      margin: 20px auto 60px;
-      padding: 0 20px;
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
-    }
-    .callout {
-      border-left: 4px solid var(--accent);
-      padding-left: 14px;
-      margin-top: 8px;
-    }
-    .ok { color: var(--ok); }
-    .warn { color: var(--warn); }
-    code.kbd {
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      padding: 2px 6px;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.03);
-    }
-  </style>
+
+  <title>MostlyPostly — SMS Consent Policy</title>
+  <meta name="description" content="SMS communication and consent policy for MostlyPostly and participating salons." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind brand config (same as marketing homepage) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mpPrimary: "#6366F1",
+            mpPrimaryDark: "#4F46E5",
+            mpAccent: "#F97316",
+            mpBg: "#020617"
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
-  <header>
-    <a class="brand" href="/legal" aria-label="MostlyPostly">
-      <span class="dot" aria-hidden="true"></span>
-      MostlyPostly
-    </a>
-    <h1>MostlyPostly SMS Consent</h1>
-    <p><strong>Rejuve Salon Spa LLC</strong> — SMS Program administered via MostlyPostly</p>
-    <div class="subtle">Effective Date: October 2025 • Last Updated: October 2025</div>
+
+<body class="bg-slate-950 text-slate-50 antialiased">
+  <!-- Top Navigation -->
+  <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2">
+          <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-tr from-mpPrimary to-mpAccent text-xs font-semibold">
+            MP
+          </div>
+          <span class="text-lg font-semibold tracking-tight">MostlyPostly</span>
+        </a>
+
+        <!-- Legal Nav -->
+        <nav class="hidden items-center gap-6 text-sm font-medium text-slate-200 md:flex">
+          <a href="/legal/privacy.html" class="hover:text-white">Privacy</a>
+          <a href="/legal/terms.html" class="hover:text-white">Terms</a>
+          <a href="/legal/sms-consent.html" class="hover:text-white">SMS Consent</a>
+        </nav>
+
+        <!-- Mobile -->
+        <div class="md:hidden">
+          <a href="/legal/sms-consent.html" class="text-xs text-slate-300 underline">SMS Consent</a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>What is MostlyPostly?</h2>
-      <p>MostlyPostly is an AI assistant that helps salon teams create, preview, and approve social media posts via text/chat. By providing your mobile number to MostlyPostly (e.g., during onboarding or by messaging our service number), you consent to receive automated text messages related to caption/post creation, approvals, and operational updates for your salon.</p>
-      <div>
-        <span class="tag">Transactional only</span>
-        <span class="tag">Opt-out anytime</span>
-        <span class="tag">No marketing SMS</span>
+  <main class="relative">
+    <!-- Background glow (same as marketing homepage) -->
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.20)_0,_transparent_55%),radial-gradient(circle_at_bottom,_rgba(248,250,252,0.04)_0,_transparent_55%)]"></div>
+
+    <section class="relative mx-auto max-w-4xl px-4 py-12 sm:py-16 lg:py-20">
+      <!-- Page Header -->
+      <header class="mb-10 text-center">
+        <p class="text-xs font-semibold uppercase tracking-wide text-mpAccent">
+          Legal
+        </p>
+        <h1 class="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          SMS Consent Policy
+        </h1>
+        <p class="mt-2 text-sm text-slate-400">
+          Effective Date: October 2025 • Last Updated: October 2025
+        </p>
+      </header>
+
+      <!-- Content Card -->
+      <div class="space-y-6 rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-xl shadow-black/50 sm:p-8">
+
+        <!-- Intro -->
+        <section id="about" class="space-y-3">
+          <h2 class="text-lg font-semibold text-white">What is MostlyPostly?</h2>
+          <p class="text-sm leading-relaxed text-slate-200">
+            MostlyPostly is an AI assistant that helps salon teams create, preview, and approve social media posts via text/chat.
+            By providing your mobile number to MostlyPostly (e.g., during onboarding or by messaging our service number), you consent to receive automated text messages related to caption/post creation, approvals, and operational updates for your salon.
+          </p>
+
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-xs text-slate-300">Transactional only</span>
+            <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-xs text-slate-300">Opt-out anytime</span>
+            <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-xs text-slate-300">No marketing SMS</span>
+          </div>
+        </section>
+
+        <!-- Purpose -->
+        <section id="purpose" class="space-y-2">
+          <h2 class="text-lg font-semibold text-white">Message Purpose (Transactional Only)</h2>
+          <p class="text-sm text-slate-200">
+            Messages are transactional, used only for:
+          </p>
+          <ul class="ml-4 list-disc space-y-1 text-sm text-slate-200">
+            <li>Sending AI-generated captions or post previews</li>
+            <li>Confirming post approvals/denials or edits</li>
+            <li>System notifications related to your use of MostlyPostly</li>
+          </ul>
+          <p class="text-sm text-slate-300">
+            <strong class="text-mpPrimary">We do not send unsolicited marketing messages.</strong>
+          </p>
+        </section>
+
+        <!-- Frequency & Privacy (two-column on desktop) -->
+        <div class="grid gap-6 md:grid-cols-2">
+
+          <section id="frequency" class="space-y-2">
+            <h2 class="text-lg font-semibold text-white">Frequency &amp; Rates</h2>
+            <ul class="ml-4 list-disc space-y-1 text-sm text-slate-200">
+              <li>Message frequency varies based on your usage and team activity.</li>
+              <li>Message &amp; data rates may apply per your mobile plan.</li>
+            </ul>
+          </section>
+
+          <section id="privacy" class="space-y-2">
+            <h2 class="text-lg font-semibold text-white">Mobile Information &amp; SMS (Privacy Commitment)</h2>
+            <ul class="ml-4 list-disc space-y-2 text-sm text-slate-200">
+              <li>We do not sell, rent, or share mobile subscriber information (phone numbers, SMS opt-in/opt-out status, message metadata) with third parties or affiliates for marketing or promotional purposes.</li>
+              <li>Mobile information may be shared only with service providers acting on our behalf (e.g., SMS carriers/platforms) to deliver and maintain the messaging service, under confidentiality obligations.</li>
+              <li>
+                <span class="text-emerald-300">Text <code class="rounded border border-slate-600 bg-slate-900 px-1.5 py-0.5 text-xs font-mono">STOP</code> to opt out;</span>
+                <span class="text-amber-200"> text <code class="rounded border border-slate-600 bg-slate-900 px-1.5 py-0.5 text-xs font-mono">HELP</code> for help</span>.
+              </li>
+            </ul>
+
+            <p class="pt-1 text-sm text-slate-300">
+              For details, see:
+            </p>
+            <ul class="ml-4 list-disc space-y-1 text-sm text-slate-200">
+              <li><a href="/legal/privacy.html" class="text-mpAccent hover:text-mpPrimary">Privacy Policy</a></li>
+              <li><a href="/legal/terms.html" class="text-mpAccent hover:text-mpPrimary">Terms of Service</a></li>
+            </ul>
+          </section>
+
+        </div>
+
+        <!-- Opt-In -->
+        <section id="opt-in" class="space-y-2">
+          <h2 class="text-lg font-semibold text-white">Opt-In</h2>
+          <p class="text-sm text-slate-200">
+            By providing your mobile number or replying “AGREE” (or “YES”) via text, you consent to receive automated SMS through the MostlyPostly platform for post approvals, previews, and operational updates.
+            Msg &amp; data rates may apply. Consent is not a condition of purchase.
+          </p>
+        </section>
+
+        <!-- Opt-Out -->
+        <section id="opt-out" class="space-y-2">
+          <h2 class="text-lg font-semibold text-white">Opt-Out / Help</h2>
+          <ul class="ml-4 list-disc space-y-1 text-sm text-slate-200">
+            <li>Text <code class="rounded border border-slate-600 bg-slate-900 px-1.5 py-0.5 text-xs font-mono">STOP</code> to stop receiving messages.</li>
+            <li>Text <code class="rounded border border-slate-600 bg-slate-900 px-1.5 py-0.5 text-xs font-mono">HELP</code> for help.</li>
+            <li>To re-enroll, text <code class="rounded border border-slate-600 bg-slate-900 px-1.5 py-0.5 text-xs font-mono">START</code>.</li>
+          </ul>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="space-y-2">
+          <h2 class="text-lg font-semibold text-white">Contact</h2>
+          <p class="text-sm text-slate-200">
+            <strong>MostlyPostly</strong><br />
+            📧 <a href="mailto:support@mostlypostly.com" class="text-mpAccent hover:text-mpPrimary">support@mostlypostly.com</a><br />
+            📍 Carmel, Indiana
+          </p>
+        </section>
+
       </div>
-    </section>
-
-    <section id="purpose">
-      <h2>Message Purpose (Transactional Only)</h2>
-      <p>Messages are transactional, used only for:</p>
-      <ul>
-        <li>Sending AI-generated captions or post previews</li>
-        <li>Confirming post approvals/denials or edits</li>
-        <li>System notifications related to your use of MostlyPostly</li>
-      </ul>
-      <p class="callout"><strong>We do not send unsolicited marketing messages.</strong></p>
-    </section>
-
-    <div class="grid-2">
-      <section id="frequency">
-        <h2>Frequency &amp; Rates</h2>
-        <ul>
-          <li>Message frequency varies based on your usage and team activity.</li>
-          <li>Message &amp; data rates may apply per your mobile plan.</li>
-        </ul>
-      </section>
-
-      <section id="privacy">
-        <h2>Mobile Information &amp; SMS (Privacy Commitment)</h2>
-        <ul>
-          <li>We do not sell, rent, or share mobile subscriber information (phone numbers, SMS opt-in/opt-out status, message metadata) with third parties or affiliates for marketing or promotional purposes.</li>
-          <li>Mobile information may be shared only with service providers acting on our behalf (e.g., SMS carriers/platforms) to deliver and maintain the messaging service, under confidentiality obligations.</li>
-          <li><span class="ok">Text <code class="kbd">STOP</code> to opt out</span>; <span class="warn">text <code class="kbd">HELP</code> for help</span>.</li>
-        </ul>
-        <p>For details, see our SMS Consent, Privacy Policy, and Terms:</p>
-        <ul>
-          <li>SMS Consent (this page)</li>
-          <li>Privacy:
-            <a href="https://mostlypostly.com/legal/privacy.html"
-               id="privacy-link" rel="nofollow noopener">
-               https://mostlypostly.github.io/mostlypostly-legal/privacy.html
-            </a>
-          </li>
-          <li>Terms:
-            <a href="https://mostlypostly.com/legal/terms.html"
-               id="terms-link" rel="nofollow noopener">
-               https://mostlypostly.github.io/mostlypostly-legal/terms.html
-            </a>
-          </li>
-        </ul>
-      </section>
-    </div>
-
-    <section id="opt-in">
-      <h2>Opt-In</h2>
-      <p>By providing your mobile number or replying “AGREE” (or “YES”) via text, you consent to receive automated SMS from Rejuve Salon Spa LLC through the MostlyPostly platform for post approvals, previews, and related operational updates. Msg &amp; data rates may apply. Consent is not a condition of purchase.</p>
-    </section>
-
-    <section id="opt-out">
-      <h2>Opt-Out / Help</h2>
-      <ul>
-        <li>Text <code class="kbd">STOP</code> to stop receiving messages at any time.</li>
-        <li>Text <code class="kbd">HELP</code> for help.</li>
-        <li>To re-enroll, text <code class="kbd">START</code>.</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><strong>Rejuve Salon Spa LLC — SMS Program via MostlyPostly</strong><br/>
-         <a href="mailto:support@mostlypostly.com">support@mostlypostly.com</a> • Carmel, Indiana
-      </p>
     </section>
   </main>
 
-  <footer>
-    © <span id="year"></span> Rejuve Salon Spa LLC • MostlyPostly SMS Consent
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-slate-500 sm:flex-row">
+      <p>© <span id="year"></span> MostlyPostly — All Rights Reserved.</p>
+      <div class="flex gap-4">
+        <a href="/legal/privacy.html" class="hover:text-slate-300">Privacy</a>
+        <a href="/legal/terms.html" class="hover:text-slate-300">Terms</a>
+        <a href="/legal/sms-consent.html" class="hover:text-slate-300">SMS Consent</a>
+      </div>
+    </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
