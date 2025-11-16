@@ -7,15 +7,25 @@
 
   <!-- SEO -->
   <title>MostlyPostly — AI Social Media Assistant for Salons</title>
-  <meta name="description" content="MostlyPostly automates social media for salons. Stylists text a photo → get AI-generated captions → auto-post to Facebook & Instagram. Perfect for busy stylists." />
-  <meta name="keywords" content="salon marketing, salon social media, ai social media, ai caption, hairstylist marketing, salon automation, beauty marketing software, social media ai" />
+  <meta name="description" content="MostlyPostly is an AI social media assistant for salons. Stylists text a photo → get AI-generated captions, hashtags & CTAs → auto-post to Facebook & Instagram. Perfect for busy salon owners, managers, and stylists." />
+  <meta name="keywords" content="salon marketing, salon social media, salon social media assistant, ai salon marketing, ai social media, ai caption, hairstylist marketing, salon automation, beauty marketing software, social media ai, salon posting tool, salon content creator" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://mostlypostly.com/" />
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="MostlyPostly — AI Social Media Assistant for Salons" />
-  <meta property="og:description" content="Stylists text a photo → MostlyPostly writes captions, hashtags & CTAs, then auto-posts to Facebook & Instagram." />
+  <meta property="og:description" content="Stylists text a photo → MostlyPostly writes captions, hashtags & CTAs, then auto-posts to Facebook & Instagram. Built specifically for salons." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mostlypostly.com/" />
   <meta property="og:image" content="https://mostlypostly.com/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MostlyPostly — AI Social Media Assistant for Salons" />
+  <meta name="twitter:description" content="AI-powered salon social media assistant. Text a photo → get captions, hashtags & CTAs → auto-post to Facebook & Instagram." />
+  <meta name="twitter:image" content="https://mostlypostly.com/og-image.jpg" />
 
   <!-- Favicon (update paths as needed) -->
   <link rel="icon" href="/favicon.ico" />
@@ -38,6 +48,90 @@
       }
     };
   </script>
+
+  <!-- JSON-LD: Website Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MostlyPostly",
+    "url": "https://mostlypostly.com/",
+    "description": "AI social media assistant for salons that turns stylist photos into ready-to-post content.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://mostlypostly.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MostlyPostly",
+    "url": "https://mostlypostly.com/",
+    "logo": "https://mostlypostly.com/logo.png",
+    "sameAs": [],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "email": "support@mostlypostly.com",
+        "contactType": "customer support",
+        "areaServed": "US"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: SoftwareApplication (SaaS SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MostlyPostly",
+    "applicationCategory": "MarketingApplication",
+    "operatingSystem": "Web",
+    "description": "MostlyPostly is an AI social media assistant built for salons. Stylists text a photo and receive ready-to-post captions, hashtags, and CTAs that auto-publish to Facebook and Instagram.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Early access program for salons. Full pricing tiers coming soon."
+    },
+    "url": "https://mostlypostly.com/"
+  }
+  </script>
+
+  <!-- JSON-LD: Breadcrumbs with keyword-rich names -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "MostlyPostly Home – Salon AI Social Media Assistant",
+        "item": "https://mostlypostly.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Features – AI Salon Social Media Automation",
+        "item": "https://mostlypostly.com/#features"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Legal & Policies – Salon Marketing Compliance",
+        "item": "https://mostlypostly.com/legal/"
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-slate-950 text-slate-50 antialiased">
   <!-- Top Navigation -->
@@ -45,7 +139,7 @@
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between py-4">
         <!-- Logo -->
-        <a href="#top" class="flex items-center gap-2">
+        <a href="#top" class="flex items-center gap-2" aria-label="MostlyPostly home">
           <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-tr from-mpPrimary to-mpAccent text-xs font-semibold">
             MP
           </div>
@@ -53,7 +147,7 @@
         </a>
 
         <!-- Desktop Nav -->
-        <nav class="hidden items-center gap-8 text-sm font-medium text-slate-200 md:flex">
+        <nav class="hidden items-center gap-8 text-sm font-medium text-slate-200 md:flex" aria-label="Primary navigation">
           <a href="#features" class="hover:text-white">Features</a>
           <a href="#value" class="hover:text-white">Why salons love it</a>
           <a href="#pricing" class="hover:text-white">Pricing</a>
@@ -97,7 +191,7 @@
           </p>
 
           <!-- Bullet row -->
-          <div class="mt-6 grid gap-3 text-sm text-slate-200 sm:grid-cols-2 sm:text-base">
+          <div class="mt-6 grid gap-3 text-sm text-slate-200 sm:grid-cols-2 sm:text-base" aria-label="Key benefits">
             <div class="flex items-center gap-2">
               <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/10 text-xs text-emerald-400">✔</span>
               Captions &amp; hashtags
@@ -137,7 +231,7 @@
         </div>
 
         <!-- Right-side “App preview” style card -->
-        <div class="flex-1">
+        <div class="flex-1" aria-label="Text-to-post preview example">
           <div class="mx-auto max-w-md rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-xl shadow-black/60 backdrop-blur">
             <div class="flex items-center justify-between">
               <div>
@@ -557,6 +651,7 @@
               required
               placeholder="Your best email"
               class="w-full rounded-full border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-mpPrimary focus:outline-none focus:ring-1 focus:ring-mpPrimary"
+              aria-label="Your email address"
             />
             <button
               type="submit"
@@ -626,8 +721,13 @@
         </div>
       </div>
 
-      <div class="mt-8 border-t border-slate-800 pt-4 text-xs text-slate-500">
-        © 2025 MostlyPostly — All Rights Reserved.
+      <div class="mt-8 border-t border-slate-800 pt-4 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2025 MostlyPostly — All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="/legal/privacy.html" class="hover:text-slate-300">Privacy</a>
+          <a href="/legal/terms.html" class="hover:text-slate-300">Terms</a>
+          <a href="/legal/sms-consent.html" class="hover:text-slate-300">SMS Consent</a>
+        </div>
       </div>
     </div>
   </footer>
